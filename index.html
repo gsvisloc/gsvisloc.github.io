@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="RESfM: Robust Deep Equivariant Structure from Motion">
-  <meta name="keywords" content="Outlier Removal, RESFM, Structure from Motion, SfM,3D Reconstruction,Camera Pose Estimation">
+        content="RESFM: Robust Equivariant Multiview Structure from Motion">
+  <meta name="keywords" content="Outlier Removal, RESFM, Structure from Motion, SfM,3D Reconstruction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="0DdB5OUMjPIECnNDQsCR7aKGHWBuYuj4jEB11r4Q_ns" />
-  <title>RESfM: Robust Deep Equivariant Structure from Motion</title>
+  <title>RESFM: Robust Equivariant Multiview Structure from Motion</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -89,7 +89,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">RESfM: Robust Deep Equivariant Structure from Motion</h1>
+          <h1 class="title is-1 publication-title">RESFM: Robust Equivariant Multiview Structure from Motion</h1>
           <div class="is-size-5 publication-authors">
 		  
 			<span class="author-block">
@@ -113,14 +113,14 @@
             <span class="author-block"><sup>2</sup>NVIDIA Research</span>
           </div>
           <div class="is-size-4 publication-authors">
-              <span class="author-block"> ICLR 2025 <br> <span style="font-size: small;">The updated version will be posted soon.</span></span>
+              <span class="author-block"> ICLR 2025 <br> <span style="font-size: small;">The updated version will be posted soon.</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://openreview.net/pdf?id=wldwEhQ7cl"
+                <a href="https://arxiv.org/pdf/2404.14280"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -422,18 +422,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Multiview Structure from Motion is a fundamental and challenging computer vision problem. A recent deep-based approach utilized matrix equivariant architectures for simultaneous recovery of camera pose and 3D scene structure from large image collections.
+            Multiview Structure from Motion is a fundamental and challenging computer vision problem. A recent deep-based approach was proposed utilizing matrix equivariant architectures for the simultaneous recovery of camera pose and 3D scene structure from large image collections.
           </p>
           <p>
-           That work, however, made the unrealistic assumption that the point tracks given as input are almost clean of outliers. Here, we propose an architecture suited to dealing with outliers by adding a multiview inlier/outlier classification module that respects the model equivariance and by utilizing a robust bundle adjustment step.
+            This work however made the unrealistic assumption that the point tracks given as input are clean of outliers. Here we propose an architecture suited to dealing with outliers by adding an inlier/outlier classifying module that respects the model equivariance and by adding a robust bundle adjustment step.
           </p>
           <p>
-           Experiments demonstrate that our method can be applied successfully in realistic settings that include large image collections and point tracks extracted with common heuristics that include many outliers, achieving state-of-the-art accuracies in almost all runs, superior to existing deep-based methods and on-par with leading classical (non-deep) sequential and global methods.
+            Experiments demonstrate that our method can be successfully applied in realistic settings that include large image collections and point tracks extracted with common heuristics and include many outliers.
           </p>
         </div>
       </div>
     </div>
-  </div>
     <!--/ Abstract. -->
 
 </section>
@@ -447,15 +446,14 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-    @inproceedings{
-    khatib2025resfm,
-    title={{RES}fM: Robust Deep Equivariant Structure from Motion},
-    author={Fadi Khatib and Yoni Kasten and Dror Moran and Meirav Galun and Ronen Basri},
-    booktitle={The Thirteenth International Conference on Learning Representations},
-    year={2025},
-    url={https://openreview.net/forum?id=wldwEhQ7cl}
-    }
-
+      @misc{khatib2024resfm,
+      title={RESFM: Robust Equivariant Multiview Structure from Motion},
+      author={Fadi Khatib and Yoni Kasten and Dror Moran and Meirav Galun and Ronen Basri},
+      year={2024},
+      eprint={2404.14280},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
     </code></pre>
   </div>
 </section>
@@ -472,7 +470,7 @@
                 </a>
             </div>
             <div class="columns is-centered">
-                <div class="column is-8  has-text-centered">
+                <div class="column is-8  has-text-centered"">
                     <div class="content">
                         <p>
                             This website is forked from the
