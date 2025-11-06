@@ -39,7 +39,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Generalizable Visual Localization for Gaussian Splatting Scene Representations</h1>
+          <h1 class="title is-1 publication-title">GSVisLoc: Generalizable Visual Localization for Gaussian Splatting Scene Representations</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block"><a href="https://fadikhatib.github.io/">Fadi Khatib*</a><sup>1</sup>,</span>
             <span class="author-block"><a href="https://scholar.google.com/citations?user=kS5jfSoAAAAJ&hl=en/">Dror Moran*</a><sup>1</sup>,</span>
@@ -93,7 +93,11 @@
           </div>
 
           <div class="hero-image mt-5">
-            <img src="./static/media/scenes/1204e08f17_train_1.png" alt="GSVisLoc teaser image showing generalization across scenes" style="max-width:100%; border-radius:10px;">
+            <img src="./static/media/teaser.png" alt="GSVisLoc teaser image" style="max-width:100%; border-radius:10px;">
+              <p class="has-text-centered mt-3">
+                Given an RGB query image and a 3D Gaussian Splatting (3DGS) scene, <strong>GSVisLoc</strong> estimates the camera pose by matching 2D features with 3D Gaussian descriptors, followed by a 3DGS-based pose refinement step.
+              </p>
+
           </div>
         </div>
       </div>
@@ -101,7 +105,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section has-background-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -116,33 +120,42 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-vcentered">
-      <div class="column">
-        <img src="./static/media/model.png" alt="GSVisLoc model pipeline" style="max-width:100%; border-radius:10px;">
-      </div>
-      <div class="column content">
-        <ul>
-          <li><strong>3DGS Encoder:</strong> Encodes local Gaussian neighborhoods using a KPConv-based architecture, producing compact region-level descriptors that capture geometry, appearance, and opacity information.</li>
-          <li><strong>2D Image Encoder:</strong> Extracts hierarchical image features at coarse and fine resolutions with a ConvFormer backbone, enabling both global context and pixel-level precision.</li>
-          <li><strong>3D–2D Alignment:</strong> Interleaved self- and cross-attention layers align 3D and 2D features, establishing coarse correspondences between scene regions and image patches.</li>
-          <li><strong>Fine Matching:</strong> Local refinement modules predict dense matching heatmaps, improving correspondence accuracy to the sub-pixel level.</li>
-          <li><strong>Pose Estimation and Refinement:</strong> Camera pose is recovered via PnP + RANSAC from the predicted matches, followed by a 3DGS-based pose refinement step to ensure metric consistency with the Gaussian scene.</li>
-        </ul>
-      </div>
+<section class="section" >
+  <div class="container is-max-desktop has-text-centered">
+
+    <!-- Model figure -->
+    <div class="mb-5">
+      <img src="./static/media/model.png" alt="GSVisLoc model pipeline"
+           style="max-width:100%; border-radius:10px;">
     </div>
+
+    <!-- Model description -->
+    <div class="content has-text-left" style="max-width: 850px; margin: 0 auto;">
+      <ul>
+        <li><strong>3DGS Encoder:</strong> Encodes local Gaussian neighborhoods using a KPConv-based architecture, producing compact region-level descriptors that capture geometry, appearance, and opacity information.</li>
+        <li><strong>2D Image Encoder:</strong> Extracts hierarchical image features at coarse and fine resolutions with a ConvFormer backbone, enabling both global context and pixel-level precision.</li>
+        <li><strong>3D–2D Alignment:</strong> Interleaved self- and cross-attention layers align 3D and 2D features, establishing coarse correspondences between scene regions and image patches.</li>
+        <li><strong>Fine Matching:</strong> Local refinement modules predict dense matching heatmaps, improving correspondence accuracy to the sub-pixel level.</li>
+        <li><strong>Pose Estimation and Refinement:</strong> Camera pose is recovered via PnP + RANSAC from the predicted matches, followed by a 3DGS-based pose refinement step to ensure metric consistency with the Gaussian scene.</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
 
-<section class="section">
+
+
+
+<section class="section has-background-light">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Generalization on ScanNet++</h2>
-    <p class="has-text-centered mb-4">
-      Median position (cm) and rotation (°) errors across scenes. The best result in each row is shown in <strong>bold</strong>,
-      and the second best is <u>underlined</u>.
-    </p>
+      <p class="has-text-centered mb-4">
+        <strong>GSVisLoc</strong> is trained on multiple <strong>ScanNet++</strong> scenes and evaluated on novel test scenes to assess cross-scene generalization.
+        We report the median translation (<em>cm</em>) and rotation (<em>°</em>) errors per scene.
+        <strong>Bold</strong> indicates the best result, and <u>underline</u> indicates the second best.
+        “Avg. Med ↓” is the average of per-scene medians.
+      </p>
     <div class="table-container">
       <table class="table is-striped is-hoverable is-fullwidth has-text-centered">
         <thead>
@@ -191,87 +204,144 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Qualitative Results — Scene Slider</h2>
+    <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
     <p class="has-text-centered mb-4">
-      Train images · Test image · Rendered from estimated pose
+      Each slide visualizes qualitative results for <strong>GSVisLoc</strong> on unseen <strong>ScanNet++</strong> scenes.
+      Two training images (used to construct the 3DGS model), a query image, and the view rendered from the estimated pose are shown.
+      The query images are <strong>out-of-distribution (OOD)</strong> with respect to the training scenes, demonstrating <strong>GSVisLoc</strong>’s ability to generalize to novel environments and achieve accurate camera localization.
     </p>
+
 
     <div id="scene-carousel" class="carousel results-carousel">
 
       <!-- === Slide 1 === -->
-      <div class="item is-active" data-scene="placeholder1">
+      <div class="item is-active" data-scene="480ddaadc0">
         <div class="scene-row" style="display:flex; flex-direction:row; justify-content:space-between; align-items:center; width:100%; gap:1rem;">
           <div style="flex:1; text-align:center;">
-            <img src="./static/media/scenes/placeholder.png" alt="Train image 1"
+            <img src="./static/media/scenes/scannet++/examples/480ddaadc0/train1.jpg" alt="Train image 1"
                  style="width:100%; height:auto; object-fit:cover;">
             <p class="is-size-6 mt-2">Train image</p>
           </div>
           <div style="flex:1; text-align:center;">
-            <img src="./static/media/scenes/placeholder.png" alt="Train image 2"
+            <img src="./static/media/scenes/scannet++/examples/480ddaadc0/train2.jpg" alt="Train image 2"
                  style="width:100%; height:auto; object-fit:cover;">
             <p class="is-size-6 mt-2">Train image</p>
           </div>
           <div style="flex:1; text-align:center;">
-            <img src="./static/media/scenes/placeholder.png" alt="Test image"
+            <img src="./static/media/scenes/scannet++/examples/480ddaadc0/test.jpg" alt="Test image"
                  style="width:100%; height:auto; object-fit:cover;">
             <p class="is-size-6 mt-2">Test image</p>
           </div>
           <div style="flex:1; text-align:center;">
-            <img src="./static/media/scenes/placeholder.png" alt="Rendered image"
+            <img src="./static/media/scenes/scannet++/examples/480ddaadc0/DSC04664.JPG"  alt="Rendered image"
                  style="width:100%; height:auto; object-fit:cover;">
-            <p class="is-size-6 mt-2">Rendered from estimated pose</p>
+            <p class="is-size-6 mt-2">Rendered from est. pose</p>
           </div>
         </div>
       </div>
 
       <!-- === Slide 2 === -->
-      <div class="item" data-scene="placeholder2">
+      <div class="item is-active" data-scene="1204e08f17">
         <div class="scene-row" style="display:flex; flex-direction:row; justify-content:space-between; align-items:center; width:100%; gap:1rem;">
           <div style="flex:1; text-align:center;">
-            <img src="./static/media/scenes/placeholder.png" alt="Train image 1"
+            <img src="./static/media/scenes/scannet++/examples/1204e08f17/train1.jpg" alt="Train image 1"
                  style="width:100%; height:auto; object-fit:cover;">
             <p class="is-size-6 mt-2">Train image</p>
           </div>
           <div style="flex:1; text-align:center;">
-            <img src="./static/media/scenes/placeholder.png" alt="Train image 2"
+            <img src="./static/media/scenes/scannet++/examples/1204e08f17/train2.jpg" alt="Train image 2"
                  style="width:100%; height:auto; object-fit:cover;">
             <p class="is-size-6 mt-2">Train image</p>
           </div>
           <div style="flex:1; text-align:center;">
-            <img src="./static/media/scenes/placeholder.png" alt="Test image"
+            <img src="./static/media/scenes/scannet++/examples/1204e08f17/test.jpg" alt="Test image"
                  style="width:100%; height:auto; object-fit:cover;">
             <p class="is-size-6 mt-2">Test image</p>
           </div>
           <div style="flex:1; text-align:center;">
-            <img src="./static/media/scenes/placeholder.png" alt="Rendered image"
+            <img src="./static/media/scenes/scannet++/examples/1204e08f17/DSC08396.JPG"  alt="Rendered image"
                  style="width:100%; height:auto; object-fit:cover;">
-            <p class="is-size-6 mt-2">Rendered from estimated pose</p>
+            <p class="is-size-6 mt-2">Rendered from est. pose</p>
           </div>
         </div>
       </div>
 
       <!-- === Slide 3 === -->
-      <div class="item" data-scene="placeholder3">
+      <div class="item is-active" data-scene="52599ae063">
         <div class="scene-row" style="display:flex; flex-direction:row; justify-content:space-between; align-items:center; width:100%; gap:1rem;">
           <div style="flex:1; text-align:center;">
-            <img src="./static/media/scenes/teaser.png" alt="Train image 1"
+            <img src="./static/media/scenes/scannet++/examples/52599ae063/train1.jpg" alt="Train image 1"
                  style="width:100%; height:auto; object-fit:cover;">
             <p class="is-size-6 mt-2">Train image</p>
           </div>
           <div style="flex:1; text-align:center;">
-            <img src="./static/media/scenes/teaser.png" alt="Train image 2"
+            <img src="./static/media/scenes/scannet++/examples/52599ae063/train2.jpg" alt="Train image 2"
                  style="width:100%; height:auto; object-fit:cover;">
             <p class="is-size-6 mt-2">Train image</p>
           </div>
           <div style="flex:1; text-align:center;">
-            <img src="./static/media/scenes/teaser.png" alt="Test image"
+            <img src="./static/media/scenes/scannet++/examples/52599ae063/test.jpg" alt="Test image"
                  style="width:100%; height:auto; object-fit:cover;">
             <p class="is-size-6 mt-2">Test image</p>
           </div>
           <div style="flex:1; text-align:center;">
-            <img src="./static/media/scenes/teaser.png" alt="Rendered image"
+            <img src="./static/media/scenes/scannet++/examples/52599ae063/DSC05090.JPG"  alt="Rendered image"
                  style="width:100%; height:auto; object-fit:cover;">
-            <p class="is-size-6 mt-2">Rendered from estimated pose</p>
+            <p class="is-size-6 mt-2">Rendered from est. pose</p>
+          </div>
+        </div>
+      </div>
+
+            <!-- === Slide 4 === -->
+      <div class="item is-active" data-scene="ab11145646">
+        <div class="scene-row" style="display:flex; flex-direction:row; justify-content:space-between; align-items:center; width:100%; gap:1rem;">
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/scannet++/examples/ab11145646/train1.jpg" alt="Train image 1"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Train image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/scannet++/examples/ab11145646/train2.jpg" alt="Train image 2"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Train image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/scannet++/examples/ab11145646/test.jpg" alt="Test image"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Test image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/scannet++/examples/ab11145646/DSC07489.JPG"  alt="Rendered image"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Rendered from est. pose</p>
+          </div>
+        </div>
+      </div>
+
+
+
+            <!-- === Slide 5 === -->
+      <div class="item is-active" data-scene="b26e64c4b0">
+        <div class="scene-row" style="display:flex; flex-direction:row; justify-content:space-between; align-items:center; width:100%; gap:1rem;">
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/scannet++/examples/b26e64c4b0/train1.jpg" alt="Train image 1"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Train image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/scannet++/examples/b26e64c4b0/train2.jpg" alt="Train image 2"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Train image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/scannet++/examples/b26e64c4b0/test.jpg" alt="Test image"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Test image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/scannet++/examples/b26e64c4b0/DSC02989.JPG"  alt="Rendered image"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Rendered from est. pose</p>
           </div>
         </div>
       </div>
@@ -284,7 +354,7 @@
   #scene-carousel .slider,
   #scene-carousel .slider-container { width: 100%; }
   #scene-carousel .slider-container .slider-item,
-  #scene-carousel .item { width: 100% !important; }
+  #scene-carousel .item { width: 100% ; }
   #scene-carousel .scene-row img { border-radius: 4px; }
 </style>
 
@@ -297,7 +367,7 @@ document.addEventListener('DOMContentLoaded', function () {
       autoplay: true,
       loop: true,
       pauseOnHover: true,
-      duration: 200
+      duration: 1000
     });
   }
 });
