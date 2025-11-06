@@ -9,29 +9,20 @@
   <meta name="google-site-verification" content="0DdB5OUMjPIECnNDQsCR7aKGHWBuYuj4jEB11r4Q_ns" />
   <title>Generalizable Visual Localization for Gaussian Splatting Scene Representations</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="https://www.weizmann.ac.il/pages/sites/all/images/favicon.svg">
 
@@ -43,47 +34,6 @@
 </head>
 <body>
 
-<!--&lt;!&ndash;<nav class="navbar" role="navigation" aria-label="main navigation">-->
-<!--  <div class="navbar-brand">-->
-<!--    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">-->
-<!--      <span aria-hidden="true"></span>-->
-<!--      <span aria-hidden="true"></span>-->
-<!--      <span aria-hidden="true"></span>-->
-<!--    </a>-->
-<!--  </div>-->
-<!--  <div class="navbar-menu">-->
-<!--    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">-->
-<!--      <a class="navbar-item" href="https://keunhong.com">-->
-<!--      <span class="icon">-->
-<!--          <i class="fas fa-home"></i>-->
-<!--      </span>-->
-<!--      </a>-->
-
-<!--      <div class="navbar-item has-dropdown is-hoverable">-->
-<!--        <a class="navbar-link">-->
-<!--          More Research-->
-<!--        </a>-->
-<!--        <div class="navbar-dropdown">-->
-<!--          <a class="navbar-item" href="https://hypernerf.github.io">-->
-<!--            HyperNeRF-->
-<!--          </a>-->
-<!--          <a class="navbar-item" href="https://nerfies.github.io">-->
-<!--            Nerfies-->
-<!--          </a>-->
-<!--          <a class="navbar-item" href="https://latentfusion.github.io">-->
-<!--            LatentFusion-->
-<!--          </a>-->
-<!--          <a class="navbar-item" href="https://photoshape.github.io">-->
-<!--            PhotoShape-->
-<!--          </a>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-
-<!--  </div>-->
-<!--</nav>&ndash;&gt;-->
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -91,26 +41,16 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Generalizable Visual Localization for Gaussian Splatting Scene Representations</h1>
           <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://fadikhatib.github.io/">Fadi Khatib*</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=kS5jfSoAAAAJ&hl=en/">Dror Moran*</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=Jp8GUPYAAAAJ&hl=en">Guy Trostianetsky</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://ykasten.github.io/">Yoni Kasten</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="https://www.weizmann.ac.il/math/meirav/">Meirav Galun</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://www.weizmann.ac.il/math/ronen/home">Ronen Basri</a><sup>1</sup></span>
+          </div>
 
-			<span class="author-block">
-				<a href="https://fadikhatib.github.io/">Fadi Khatib*</a><sup>1</sup>,
-			</span>
-			<span class="author-block">
-				<a href="https://scholar.google.com/citations?user=kS5jfSoAAAAJ&hl=en/">Dror Moran*</a><sup>1</sup>,
-			</span>
-            <span class="author-block">
-				<a href="https://scholar.google.com/citations?user=Jp8GUPYAAAAJ&hl=en">Guy Trostianetsky</a><sup>1</sup>,
-			</span>
-			<span class="author-block">
-				<a href="https://ykasten.github.io/">Yoni Kasten</a><sup>2</sup>,
-			</span>
-
-			<span class="author-block">
-				<a href="https://www.weizmann.ac.il/math/meirav/">Meirav Galun</a><sup>1</sup>,
-			</span>
-			<span class="author-block">
-				<a href="https://www.weizmann.ac.il/math/ronen/home">Ronen Basri</a><sup>1</sup>
-			</span>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">* Equal contribution</span>
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -120,380 +60,286 @@
           <div class="is-size-4 publication-authors">
               <span class="author-block"> ICCVW 2025 (CALIPOSE workshop) </span>
           </div>
-          <div class="is-size-3">
-              <span class="author-block" style="color: red;"> UNDER RECONSTRUCTION </span>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+              <a href="https://arxiv.org/pdf/2508.18242" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener">
+              <span class="icon"> <i class="fas fa-file-pdf"></i> </span> <span>Paper</span>
+              </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2508.18242" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span><span>arXiv</span>
+                </a>
+              </span>
+<!--              <span class="link-block">-->
+<!--                <a href="./static/GSVisLoc_poster.pdf" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener">-->
+<!--                  <span class="icon"><i class="fas fa-image"></i></span><span>Poster</span>-->
+<!--                </a>-->
+<!--              </span>-->
+<!--              <span class="link-block">-->
+<!--                <a href="./static/GSVisLoc_slides.pdf" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener">-->
+<!--                  <span class="icon"><i class="fas fa-file-powerpoint"></i></span><span>Slides</span>-->
+<!--                </a>-->
+<!--              </span>-->
+              <span class="link-block">
+                <span class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span><span>Code — coming soon</span>
+                </span>
+              </span>
+            </div>
           </div>
 
-<!--          <div class="column has-text-centered">-->
-<!--            <div class="publication-links">-->
-<!--              &lt;!&ndash; PDF Link. &ndash;&gt;-->
-<!--              <span class="link-block">-->
-<!--                <a href="https://openreview.net/pdf?id=wldwEhQ7cl"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="fas fa-file-pdf"></i>-->
-<!--                  </span>-->
-<!--                  <span>Paper</span>-->
-<!--                </a>-->
-<!--              </span>-->
-<!--              <span class="link-block">-->
-<!--                <a href="https://arxiv.org/abs/2404.14280"-->
-<!--                   class="external-link button is-normal is-rounded is-dark">-->
-<!--                  <span class="icon">-->
-<!--                      <i class="ai ai-arxiv"></i>-->
-<!--                  </span>-->
-<!--                  <span>arXiv</span>-->
-<!--                </a>-->
-<!--              </span>-->
-<!--              &lt;!&ndash; Code Link. &ndash;&gt;-->
-<!--			<span class="link-block">-->
-<!--&lt;!&ndash;				<a href="https://github.com/FadiKhatib/gsvisloc"&ndash;&gt;-->
-<!--                <div class="external-link button is-normal is-rounded is-dark">-->
-<!--					<span class="icon">-->
-<!--						<i class="fab fa-github"></i>-->
-<!--					</span>-->
-<!--					<span>Code - coming soon</span>-->
-<!--				</div>-->
-<!--			</span>-->
-<!--		</div>-->
-
-<!--          </div>-->
+          <div class="hero-image mt-5">
+            <img src="./static/media/scenes/1204e08f17_train_1.png" alt="GSVisLoc teaser image showing generalization across scenes" style="max-width:100%; border-radius:10px;">
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present <strong>GSVisLoc</strong>, a visual localization method tailored to <em>3D Gaussian Splatting</em> (3DGS) scene representations. Given a 3DGS model and a query image, we estimate the camera pose via <em>coarse-to-fine</em> 3D–2D matching between encoded 3D Gaussian regions and multi-scale 2D image features, followed by PnP+RANSAC and a 3DGS-based pose refinement. GSVisLoc requires no modification or retraining of the 3DGS model and discards reference images after training. It achieves state-of-the-art results among 3DGS-based methods and competitive accuracy on standard indoor and outdoor benchmarks, generalizing to novel scenes without additional training.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-vcentered">
+      <div class="column">
+        <img src="./static/media/model.png" alt="GSVisLoc model pipeline" style="max-width:100%; border-radius:10px;">
+      </div>
+      <div class="column content">
+        <ul>
+          <li><strong>3DGS Encoder:</strong> Encodes local Gaussian neighborhoods using a KPConv-based architecture, producing compact region-level descriptors that capture geometry, appearance, and opacity information.</li>
+          <li><strong>2D Image Encoder:</strong> Extracts hierarchical image features at coarse and fine resolutions with a ConvFormer backbone, enabling both global context and pixel-level precision.</li>
+          <li><strong>3D–2D Alignment:</strong> Interleaved self- and cross-attention layers align 3D and 2D features, establishing coarse correspondences between scene regions and image patches.</li>
+          <li><strong>Fine Matching:</strong> Local refinement modules predict dense matching heatmaps, improving correspondence accuracy to the sub-pixel level.</li>
+          <li><strong>Pose Estimation and Refinement:</strong> Camera pose is recovered via PnP + RANSAC from the predicted matches, followed by a 3DGS-based pose refinement step to ensure metric consistency with the Gaussian scene.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-
-<!--<section class="hero is-light">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <div id="results-carousel" class="carousel results-carousel" style="width: 100%;">-->
-
-<!--        <div class="item item-0007">-->
-<!--        <table style="width:100%; text-align:center;">-->
-<!--          <tr style="text-align: center;">-->
-<!--            <td colspan="2" style="text-align: center;" width="100%">-->
-<!--              <img src="./static/media/images/0007_300.png" width="auto" height="auto">-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>-->
-<!--            <video poster="" id="0007_ours" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ours/0007_300.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--            <video poster="" id="0007_ESFM" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ESFM/0007_300.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--          <tr style="text-align: center;" height=40px">-->
-<!--            <td style="text-align: center;">-->
-<!--              Ours-->
-<!--            </td>-->
-<!--            <td style="text-align: center;">-->
-<!--              ESFM-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--        </table>-->
-
-<!--        </div>-->
-<!--        <div class="item item-0012">-->
-<!--          <table>-->
-<!--          <tr style="text-align: center;">-->
-<!--            <td colspan="2" style="text-align: center;" width="auto" height="auto">-->
-<!--              <img src="./static/media/images/0012_300.png">-->
-<!--            </td>-->
-
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>-->
-<!--            <video poster="" id="0012_ours" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ours/0012_300.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--            <video poster="" id="0012_ESFM" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ESFM/0012_300.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--          <tr style="text-align: center;" height=40px">-->
-<!--            <td style="text-align: center;">-->
-<!--              Ours-->
-<!--            </td>-->
-<!--            <td style="text-align: center;">-->
-<!--              ESFM-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--        </table>-->
-<!--        </div>-->
-<!--        <div class="item item-0060">-->
-<!--          <table>-->
-<!--          <tr style="text-align: center;">-->
-<!--            <td colspan="2" style="text-align: center;" width="auto" height="auto">-->
-<!--              <img src="./static/media/images/0060.png">-->
-<!--            </td>-->
-
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>-->
-<!--            <video poster="" id="0060_ours" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ours/0060.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--            <video poster="" id="0060_ESFM" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ESFM/0060.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--          <tr style="text-align: center;" height=40px">-->
-<!--            <td style="text-align: center;">-->
-<!--              Ours-->
-<!--            </td>-->
-<!--            <td style="text-align: center;">-->
-<!--              ESFM-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--        </table>-->
-<!--        </div>-->
-<!--        <div class="item item-0185">-->
-<!--          <table>-->
-<!--          <tr style="text-align: center;">-->
-<!--            <td colspan="2" style="text-align: center;" width="auto" height="auto">-->
-<!--              <img src="./static/media/images/0185.png">-->
-<!--            </td>-->
-
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>-->
-<!--            <video poster="" id="0185_ours" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ours/0185.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--            <video poster="" id="0185_ESFM" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ESFM/0185.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--          <tr style="text-align: center;" height=40px">-->
-<!--            <td style="text-align: center;">-->
-<!--              Ours-->
-<!--            </td>-->
-<!--            <td style="text-align: center;">-->
-<!--              ESFM-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--        </table>-->
-<!--        </div>-->
-
-<!--        <div class="item item-Ellis_Island">-->
-<!--          <table>-->
-<!--          <tr style="text-align: center;">-->
-<!--            <td colspan="2" style="text-align: center;">-->
-<!--              <img src="./static/media/images/Ellis_Island.png" width="auto" height="auto">-->
-<!--            </td>-->
-
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>-->
-<!--            <video poster="" id="Ellis_Island_ours" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ours/Ellis_Island.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--            <video poster="" id="Ellis_Island_ESFM" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ESFM/Ellis_Island.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--          <tr style="text-align: center;" height=40px">-->
-<!--            <td style="text-align: center;">-->
-<!--              Ours-->
-<!--            </td>-->
-<!--            <td style="text-align: center;">-->
-<!--              ESFM-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--        </table>-->
-<!--        </div>-->
-
-<!--        <div class="item item-Madrid_Metropolis">-->
-<!--          <table>-->
-<!--          <tr style="text-align: center;">-->
-<!--            <td colspan="2" style="text-align: center;" width="auto" height="auto">-->
-<!--              <img src="./static/media/images/Madrid_Metropolis.png">-->
-<!--            </td>-->
-
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>-->
-<!--            <video poster="" id="Madrid_Metropolis_ours" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ours/Madrid_Metropolis.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--            <video poster="" id="Madrid_Metropolis_ESFM" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ESFM/Madrid_Metropolis.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--          <tr style="text-align: center;" height=40px">-->
-<!--            <td style="text-align: center;">-->
-<!--              Ours-->
-<!--            </td>-->
-<!--            <td style="text-align: center;">-->
-<!--              ESFM-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--        </table>-->
-<!--        </div>-->
-
-<!--        <div class="item item-Montreal_Notre_Dame">-->
-<!--          <table>-->
-<!--          <tr style="text-align: center;">-->
-<!--            <td colspan="2" style="text-align: center;" width="auto" height="auto">-->
-<!--              <img src="./static/media/images/Montreal_Notre_Dame.png">-->
-<!--            </td>-->
-
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>-->
-<!--            <video poster="" id="Montreal_Notre_Dame_ours" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ours/Montreal_Notre_Dame.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--            <video poster="" id="Montreal_Notre_Dame_ESFM" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ESFM/Montreal_Notre_Dame.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--          <tr style="text-align: center;" height=40px">-->
-<!--            <td style="text-align: center;">-->
-<!--              Ours-->
-<!--            </td>-->
-<!--            <td style="text-align: center;">-->
-<!--              ESFM-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--        </table>-->
-<!--        </div>-->
-
-<!--        <div class="item item-Piazza_del_Popolo">-->
-<!--          <table>-->
-<!--          <tr style="text-align: center;">-->
-<!--            <td colspan="2" style="text-align: center;" width="auto" height="auto">-->
-<!--              <img src="./static/media/images/Piazza_del_Popolo.png">-->
-<!--            </td>-->
-
-<!--          </tr>-->
-<!--          <tr>-->
-<!--            <td>-->
-<!--            <video poster="" id="Piazza_del_Popolo_ours" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ours/Piazza_del_Popolo.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--            <td>-->
-<!--            <video poster="" id="Piazza_del_Popolo_ESFM" autoplay muted loop playsinline height="100%">-->
-<!--            <source src="./static/media/ESFM/Piazza_del_Popolo.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--          <tr style="text-align: center;" height=40px">-->
-<!--            <td style="text-align: center;">-->
-<!--              Ours-->
-<!--            </td>-->
-<!--            <td style="text-align: center;">-->
-<!--              ESFM-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--        </table>-->
-<!--        </div>-->
-
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Generalization on ScanNet++</h2>
+    <p class="has-text-centered mb-4">
+      Median position (cm) and rotation (°) errors across scenes. The best result in each row is shown in <strong>bold</strong>,
+      and the second best is <u>underlined</u>.
+    </p>
+    <div class="table-container">
+      <table class="table is-striped is-hoverable is-fullwidth has-text-centered">
+        <thead>
+          <tr>
+            <th>Scene / Method</th>
+            <th colspan="2">Single-scene</th>
+            <th>Cross-scene</th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>GSplatLoc</th>
+            <th>GSVisLoc (Ours)</th>
+            <th>GSVisLoc (Ours)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ebc200e928</td><td>2.02 / 0.76</td><td><b>0.27</b> / <b>0.15</b></td><td><u>0.33</u> / <u>0.22</u></td></tr>
+          <tr><td>2a496183e1</td><td>1.29 / 0.31</td><td><u>0.34</u> / <u>0.12</u></td><td><b>0.22</b> / <b>0.11</b></td></tr>
+          <tr><td>b26e64c4b0</td><td>0.79 / 0.20</td><td><b>0.27</b> / <b>0.09</b></td><td><u>0.32</u> / <u>0.10</u></td></tr>
+          <tr><td>9b74afd2d2</td><td>6.18 / 1.29</td><td><b>0.26</b> / <u>0.14</u></td><td><u>0.35</u> / <b>0.13</b></td></tr>
+          <tr><td>bc400d86e1</td><td>17.57 / 2.09</td><td><b>0.52</b> / <b>0.16</b></td><td><u>0.62</u> / <u>0.36</u></td></tr>
+          <tr><td>1204e08f17</td><td>1.96 / 0.53</td><td><b>0.39</b> / <b>0.10</b></td><td><u>0.65</u> / <u>0.13</u></td></tr>
+          <tr><td>f8f12e4e6b</td><td>3.69 / 0.83</td><td><u>0.39</u> / <b>0.13</b></td><td><b>0.34</b> / <b>0.13</b></td></tr>
+          <tr><td>52599ae063</td><td>21.95 / 5.54</td><td><u>2.31</u> / <u>0.29</u></td><td><b>0.82</b> / <b>0.18</b></td></tr>
+          <tr><td>94ee15e8ba</td><td>1.92 / 0.29</td><td><u>0.33</u> / <u>0.13</u></td><td><b>0.30</b> / <b>0.09</b></td></tr>
+          <tr><td>9f139a318d</td><td>1.19 / 0.22</td><td><u>0.24</u> / <b>0.05</b></td><td><b>0.22</b> / <u>0.07</u></td></tr>
+          <tr><td>30f4a2b44d</td><td>4.79 / 0.74</td><td><b>0.44</b> / <u>0.18</u></td><td><u>0.46</u> / <b>0.16</b></td></tr>
+          <tr><td>37ea1c52f0</td><td>3.59 / 0.50</td><td><b>0.49</b> / <b>0.10</b></td><td><u>0.60</u> / <b>0.10</b></td></tr>
+          <tr><td>480ddaadc0</td><td>1.51 / 0.37</td><td><b>0.28</b> / <b>0.10</b></td><td><u>0.39</u> / <u>0.12</u></td></tr>
+          <tr><td>a24f64f7fb</td><td>1.08 / 0.38</td><td><u>0.54</u> / <u>0.14</u></td><td><b>0.46</b> / <b>0.13</b></td></tr>
+          <tr><td>ab11145646</td><td>8.64 / 0.88</td><td><b>0.38</b> / <b>0.13</b></td><td><u>0.95</u> / <u>0.21</u></td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Avg. Med ↓</th>
+            <th>5.21 / 0.99</th>
+            <th><u>0.50</u> / <b>0.13</b></th>
+            <th><b>0.47</b> / <u>0.15</u></th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</section>
 
 
-<!--<section class="section">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    &lt;!&ndash; Abstract. &ndash;&gt;-->
-<!--    <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-four-fifths">-->
-<!--        <h2 class="title is-3">Abstract</h2>-->
-<!--        <div class="content has-text-justified">-->
-<!--          <p>-->
-<!--            Multiview Structure from Motion is a fundamental and challenging computer vision problem. A recent deep-based approach utilized matrix equivariant architectures for simultaneous recovery of camera pose and 3D scene structure from large image collections.-->
-<!--          </p>-->
-<!--          <p>-->
-<!--           That work, however, made the unrealistic assumption that the point tracks given as input are almost clean of outliers. Here, we propose an architecture suited to dealing with outliers by adding a multiview inlier/outlier classification module that respects the model equivariance and by utilizing a robust bundle adjustment step.-->
-<!--          </p>-->
-<!--          <p>-->
-<!--           Experiments demonstrate that our method can be applied successfully in realistic settings that include large image collections and point tracks extracted with common heuristics that include many outliers, achieving state-of-the-art accuracies in almost all runs, superior to existing deep-based methods and on-par with leading classical (non-deep) sequential and global methods.-->
-<!--          </p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--    &lt;!&ndash;/ Abstract. &ndash;&gt;-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Qualitative Results — Scene Slider</h2>
+    <p class="has-text-centered mb-4">
+      Train images · Test image · Rendered from estimated pose
+    </p>
 
-<!--</section>-->
+    <div id="scene-carousel" class="carousel results-carousel">
+
+      <!-- === Slide 1 === -->
+      <div class="item is-active" data-scene="placeholder1">
+        <div class="scene-row" style="display:flex; flex-direction:row; justify-content:space-between; align-items:center; width:100%; gap:1rem;">
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/placeholder.png" alt="Train image 1"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Train image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/placeholder.png" alt="Train image 2"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Train image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/placeholder.png" alt="Test image"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Test image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/placeholder.png" alt="Rendered image"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Rendered from estimated pose</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- === Slide 2 === -->
+      <div class="item" data-scene="placeholder2">
+        <div class="scene-row" style="display:flex; flex-direction:row; justify-content:space-between; align-items:center; width:100%; gap:1rem;">
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/placeholder.png" alt="Train image 1"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Train image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/placeholder.png" alt="Train image 2"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Train image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/placeholder.png" alt="Test image"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Test image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/placeholder.png" alt="Rendered image"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Rendered from estimated pose</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- === Slide 3 === -->
+      <div class="item" data-scene="placeholder3">
+        <div class="scene-row" style="display:flex; flex-direction:row; justify-content:space-between; align-items:center; width:100%; gap:1rem;">
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/teaser.png" alt="Train image 1"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Train image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/teaser.png" alt="Train image 2"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Train image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/teaser.png" alt="Test image"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Test image</p>
+          </div>
+          <div style="flex:1; text-align:center;">
+            <img src="./static/media/scenes/teaser.png" alt="Rendered image"
+                 style="width:100%; height:auto; object-fit:cover;">
+            <p class="is-size-6 mt-2">Rendered from estimated pose</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #scene-carousel,
+  #scene-carousel .slider,
+  #scene-carousel .slider-container { width: 100%; }
+  #scene-carousel .slider-container .slider-item,
+  #scene-carousel .item { width: 100% !important; }
+  #scene-carousel .scene-row img { border-radius: 4px; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.bulmaCarousel) {
+    bulmaCarousel.attach('#scene-carousel', {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      loop: true,
+      pauseOnHover: true,
+      duration: 200
+    });
+  }
+});
+</script>
 
 
 
 
 
 
-<!--<section class="section" id="BibTeX">-->
-<!--  <div class="container is-max-desktop content">-->
-<!--    <h2 class="title">BibTeX</h2>-->
-<!--    <pre><code>-->
-<!--    @inproceedings{-->
-<!--    khatib2025resfm,-->
-<!--    title={{RES}fM: Robust Deep Equivariant Structure from Motion},-->
-<!--    author={Fadi Khatib and Yoni Kasten and Dror Moran and Meirav Galun and Ronen Basri},-->
-<!--    booktitle={The Thirteenth International Conference on Learning Representations},-->
-<!--    year={2025},-->
-<!--    url={https://openreview.net/forum?id=wldwEhQ7cl}-->
-<!--    }-->
-
-<!--    </code></pre>-->
-<!--  </div>-->
-<!--</section>-->
 
 
-
-
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{khatib2025generalizable,
+  title={Generalizable Visual Localization for Gaussian Splatting Scene Representations},
+  author={Khatib, Fadi and Moran, Dror and Trostianetsky, Guy and Kasten, Yoni and Galun, Meirav and Basri, Ronen},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={178--189},
+  year={2025}
+}
 </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/FadiKhatib" class="external-link" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-centered">
+        <div class="content">
+          <p>This website is forked from the <a href="https://nerfies.github.io/" target="_blank" rel="noopener">Nerfies website</a> and <a href="https://github.com/nerfies/nerfies.github.io" target="_blank" rel="noopener">source code</a>.</p>
         </div>
-    </section>
-    <footer class="footer">
-        <div class="container">
-            <div class="content has-text-centered">
-                <a class="icon-link" href="https://github.com/FadiKhatib" class="external-link" disabled>
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <div class="columns is-centered">
-                <div class="column is-8  has-text-centered">
-                    <div class="content">
-                        <p>
-                            This website is forked from the
-                            <a href="https://nerfies.github.io/">Nerfies website</a> and
-                            <a href="https://github.com/nerfies/nerfies.github.io">source code</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
